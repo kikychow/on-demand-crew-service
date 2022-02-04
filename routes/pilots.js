@@ -1,5 +1,5 @@
 const express = require("express");
-const pilotRoutes = express.Router();
+const pilotsRoutes = express.Router();
 const fs = require("fs");
 
 const dataPath = "./database/pilots.json";
@@ -17,7 +17,7 @@ const getPilotsData = () => {
 // Request an available pilot for a given datetime and location
 // Example GET
 // localhost/pilots/availability?location=Munich&depDateTime=2025-08-01T00:00:00Z&returnDateTime=2025-08-02T00:00:00Z
-pilotRoutes.get("/availability", (req, res) => {
+pilotsRoutes.get("/availability", (req, res) => {
   const filters = req.query;
   console.log(filters);
   const filterDepDate = new Date(filters["depDateTime"]);
@@ -84,4 +84,4 @@ function getDays(depDate, retDate) {
   return res;
 }
 
-module.exports = pilotRoutes;
+module.exports = pilotsRoutes;
