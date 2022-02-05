@@ -6,7 +6,7 @@ POST http://localhost:3000/flights
 Content-Type: application/json
 
 {
-    "pilotId": 1823,
+    "pilotId": 4,
     "depDateTime": "2025-08-01T09:00:00Z",
     "returnDateTime": "2025-08-01T10:00:00Z"
 }
